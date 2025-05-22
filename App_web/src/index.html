@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Equipo: Datos Personales y Pasatiempos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Conocenos</h1>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="#Mario">Mario</a></li>
+        <li><a href="#Ricardo">Ricardo</a></li>
+        <li><a href="#David">David</a></li>
+        <li><a href="#Diego">Diego</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="Mario">
+      <article>
+        <img src="avatar1.jpg" alt="Foto de Mario" height="250" width="250">
+        <h2>Mario</h2>
+        <p>Mario Aberto Lira Zamora nacio el 9 de diciembre del 2004, a las 6:00pm. Tiene un hermano mayor llamado Edgar y es hijo de Rosa Zamora y Jesus Lira. Entro al kinder en kerubinesm despues paso a primaria en Vicenta Saracho, posteriormente entro a la secundaria tecnica Num. 19, despues entro al CBTIs 130 en la carrera de programacion y actualmente cursa la carrera de Tecnologias de la información y desarrollo de software en la universidad Tecnologica de Durango.</p>
+        <button class="toggle-hobbies">Mostrar pasatiempos</button>
+        <ul class="hobbies hidden">
+          <li>Jugar videojuegos</li>
+          <li>Leer Manga</li>
+          <li>Ver anime</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="Ricardo">
+        <article>
+            <img src="avatar1.jpg" alt="Foto de Ricardo" height="250" width="250">
+            <h2>Ricardo</h2>
+            <p>Ricardo Luna Unzueta estudiante de la Universidad Tecnologica de Durango en la carrera de TI, apasionante del desarrollo de aplicaciones web / movil ha contribuido a diversos proyectos universitarios y personales, dominando lenguajes y frameworks como JavaScript, React, Node.js, entusiasta de la ciberseguridad en prácticas de protección de datos, análisis de vulnerabilidades y pruebas de penetración.</p>
+            <button class="toggle-hobbies">Mostrar pasatiempos</button>
+            <ul class="hobbies hidden">
+                <li>Ciclismo</li>
+                <li>Jugar videojuegos</li>
+                <li>Lectura</li>
+            </ul>
+        </article>
+    </section>
+
+    <section id="David">
+        <article>
+            <img src="avatar1.jpg" alt="Foto de Ricardo" height="250" width="250">
+            <h2>David</h2>
+            <p>Ramírez Alvarado David Jezhuah, Desarrollador , diseñador, Guitarrista y dibujante, Aprendiz de todo maestro de nada, entusiasta del desarrollo de GNU/Linux y consumidor de contenido asiático nipones, desarrollados del sistema hentai kali-linux, experto en múltiples juegos de ritmo y maestro de las artes del juego indie, dominio del japonés, ruso, portugués e ingles, en preparación de desarrollo multiplataforma y padre del desarrollo W_Ai_fu</p>
+            <button class="toggle-hobbies">Mostrar pasatiempos</button>
+            <ul class="hobbies hidden">
+                <li>Jugar Videojuegos</li>
+                <li>Programar</li>
+                <li>Ver Anime</li>
+            </ul>
+        </article>
+    </section>
+
+    <section id="Diego">
+        <article>
+            <img src="avatar1.jpg" alt="Foto de Ricardo" height="250" width="250">
+            <h2>Diego</h2>
+            <p>Diego Daher Díaz Contreras Estudiante de la universidad Tecnológica de Durango, estudia la carrera de ingeniería de software y desarrollo multiplataforma.</p>
+            <button class="toggle-hobbies">Mostrar pasatiempos</button>
+            <ul class="hobbies hidden">
+                <li>Escuchar musica</li>
+                <li>Jugar básquetbol</li>
+                <li>Jugar videojuegos</li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- formulario de contacto -->
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required aria-required="true">
+
+        <label for="email">Correo:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Equipo WebApp</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
