@@ -1,16 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Mostrar/ocultar pasatiempos
+  // Mostrar/ocultar pasatiempos con animación
   document.querySelectorAll(".toggle-hobbies").forEach(btn => {
     btn.addEventListener("click", () => {
       const list = btn.nextElementSibling;
-      list.classList.toggle("hidden");
-      btn.textContent = list.classList.contains("hidden")
-        ? "Mostrar pasatiempos"
-        : "Ocultar pasatiempos";
+      list.classList.toggle("visible");
+      btn.textContent = list.classList.contains("visible")
+        ? "Ocultar pasatiempos"
+        : "Mostrar pasatiempos";
     });
   });
 
-  // Validación formulario
   const form = document.getElementById("contact-form");
   form.addEventListener("submit", e => {
     if (!form.checkValidity()) {

@@ -1,30 +1,47 @@
-/* Paleta WCAG AA, Grid responsivo */
 :root {
   --primary: #003366;
   --accent: #006699;
   --text: #222;
   --bg: #f5f5f5;
+  --btn-bg: #006699;
+  --btn-hover: #00557a;
+  --btn-text: #fff;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: sans-serif;
   color: var(--text);
   background: var(--bg);
 }
+
 header {
   background: var(--primary);
   color: white;
   padding: 1rem;
 }
+
 nav ul {
   display: flex;
   list-style: none;
   gap: 1rem;
 }
-nav a { color: white; text-decoration: none; }
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
 
 main {
+  flex: 1;
   display: grid;
   gap: 2rem;
   padding: 1rem;
@@ -35,37 +52,87 @@ section {
   border-radius: 0.5rem;
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
-/* Hidden utility */
-.hidden { display: none; }
+section article img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
 
-/* Botón de transición suave */
-.toggle-hobbies {
+section#contacto {
+  grid-column: 1 / -1;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background: var(--btn-hover);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.hobbies {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease-out,
+    opacity 0.3s ease-out;
   margin-top: 0.5rem;
-  transition: background 0.3s;
-}
-.toggle-hobbies:hover {
-  background: var(--accent);
-  color: white;
+  padding-left: 1rem;
+  list-style: disc inside;
 }
 
-/* Formulario simple */
+.hobbies.visible {
+  max-height: 200px;
+  opacity: 1;
+}
+
 form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
+
 input, textarea {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 0.25rem;
 }
 
-/* Responsivo */
-@media (min-width: 600px) {
-  main { grid-template-columns: repeat(2, 1fr); }
+footer {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
 }
+
+@media (min-width: 600px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (min-width: 900px) {
-  main { grid-template-columns: repeat(3, 1fr); }
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
